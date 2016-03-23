@@ -297,7 +297,9 @@ def main():
             "and <a href='https://github.com/harvesthq/chosen'>Chosen</a>. "
             "Data scraped from the "
             "<a href='https://archive.ics.uci.edu/ml/datasets.html'>"
-            "UCI repository</a>.")
+            "UCI repository</a>. Code on "
+            "<a href='https://github.com/GjjvdBurg/UCI_Datasets_Filter'>"
+            "GitHub</a>.")
 
     with open('index.html', 'w') as fid:
         fid.write(str(doc))
