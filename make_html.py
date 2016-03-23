@@ -147,7 +147,8 @@ def add_menu(data):
 def main():
     data = get_data()
 
-    doc = dominate.document(title='UCI Datasets Overview')
+    doc = dominate.document(title=dominate.util.raw(
+        'GjjvdBurg &middot; UCI Datasets Filter'))
 
     with doc.head:
         tags.link(rel='stylesheet', 
