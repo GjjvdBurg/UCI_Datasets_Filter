@@ -103,6 +103,9 @@ def add_menu(data):
                 cls="a-val", id="attr-max", value=str(attr_max),
                 size=math.ceil(math.log(attr_max, 10)))
 
+    dominate.util.raw("The following menus add rows that match <i>any</i>"
+            " of the selected items.")
+
     with tags.div(cls='ui', id='missing_ui') as div:
         div += tags.b('Missing values:')
         div += tags.br()
