@@ -8,7 +8,8 @@ because I've repeatedly needed to be able to filter on instances/attributes
 and the [UCI dataset page](https://archive.ics.uci.edu/ml/datasets.html) lacks 
 this feature.
 
-To view the results go to the GitHub page: [link](link).
+To view the results go to the GitHub page: 
+[https://gjjvdburg.github.io/UCI_Datasets_Filter/](https://gjjvdburg.github.io/UCI_Datasets_Filter/).
 
 Author
 ------
