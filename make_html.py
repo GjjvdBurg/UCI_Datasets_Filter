@@ -1,15 +1,14 @@
 #!/usr/bin/env python
 
+import argparse
 import math
 import json
 import dominate
 from dominate import tags
 
-JSON_FILE = './uci/items.jl'
-
-def get_data():
+def get_data(input_file):
     data = []
-    with open(JSON_FILE, 'r') as fid:
+    with open(input_file, 'r') as fid:
         for line in fid:
             data.append(json.loads(line))
     return data
@@ -144,8 +143,8 @@ def add_menu(data):
 
 
 
-def main():
-    data = get_data()
+def main(input_file):
+    data = get_data(input_file)
 
     doc = dominate.document(title=dominate.util.raw(
         'GjjvdBurg &middot; UCI Datasets Filter'))
@@ -306,5 +305,12 @@ def main():
         fid.write(str(doc))
 
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", help="JSON input file")
+    return parser.parse_args()
+
+
 if __name__ == '__main__':
-    main()
+    args = parse_args()
+    main(args.input_file)
