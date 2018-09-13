@@ -22,6 +22,10 @@ class UciSpider(scrapy.Spider):
 
             name = ('/html/body/table[2]/tr/td/table[1]/'
                     'tr/td[1]/p[1]/span[1]/b/text()')
+
+            tmp = response.xpath(name).extract()
+            if len(tmp) == 0:
+                return
             item['name'] = response.xpath(name).extract()[0]
             if item['name'].endswith('Data Set'):
                 item['name'] = item['name'][:-8]
