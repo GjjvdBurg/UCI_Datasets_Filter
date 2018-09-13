@@ -12,4 +12,7 @@ html:
 	python make_html.py ./items.json
 
 push:
+	git push --all
 
+clean:
+	rm -f ./items.json
