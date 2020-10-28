@@ -79,12 +79,12 @@ def add_menu(data):
         div += tags.b('Number of instances:')
         div += tags.br()
         div += "Min: "
-        div += tags.input(min=str(inst_min), max=str(inst_max),
+        div += tags._input(min=str(inst_min), max=str(inst_max),
                 cls="i-val", id="inst-min", value=str(inst_min),
                 size=math.ceil(math.log(inst_max, 10)))
         div += tags.br()
         div += "Max: "
-        div += tags.input(min=str(inst_min), max=str(inst_max),
+        div += tags._input(min=str(inst_min), max=str(inst_max),
                 cls="i-val", id="inst-max", value=str(inst_max),
                 size=math.ceil(math.log(inst_max, 10)))
 
@@ -93,12 +93,12 @@ def add_menu(data):
         div += tags.b('Number of attributes:')
         div += tags.br()
         div += "Min: "
-        div += tags.input(min=str(attr_min), max=str(attr_max),
+        div += tags._input(min=str(attr_min), max=str(attr_max),
                 cls="a-val", id="attr-min", value=str(attr_min),
                 size=math.ceil(math.log(attr_max, 10)))
         div += tags.br()
         div += "Max: "
-        div += tags.input(min=str(attr_min), max=str(attr_max),
+        div += tags._input(min=str(attr_min), max=str(attr_max),
                 cls="a-val", id="attr-max", value=str(attr_max),
                 size=math.ceil(math.log(attr_max, 10)))
 
