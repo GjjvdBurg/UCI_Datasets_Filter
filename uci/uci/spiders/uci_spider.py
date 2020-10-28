@@ -4,14 +4,14 @@ from uci.items import UciItem
 
 class UciSpider(scrapy.Spider):
     name = "uci"
-    allowed_urls = ["https://archive.ics.uci.edu/ml/datasets.html"]
+    allowed_urls = ["https://archive.ics.uci.edu/ml/datasets.php"]
     start_urls = [
-            "https://archive.ics.uci.edu/ml/datasets.html"
+            "https://archive.ics.uci.edu/ml/datasets.php"
             ]
 
     def parse(self, response):
         # if this is the overview page:
-        if response.url == 'https://archive.ics.uci.edu/ml/datasets.html':
+        if response.url == 'https://archive.ics.uci.edu/ml/datasets.php':
             for href in response.css(".normal > b > a::attr('href')"):
                 url = response.urljoin(href.extract())
                 yield scrapy.Request(url, callback=self.parse)
